@@ -1,0 +1,21 @@
+<?
+
+//Define MYSQL data
+define('MYSQL_USER', 'YOUR_USER_NAME');
+define('MYSQL_PASS', 'YOUR_PASSWORD');
+define('MYSQL_HOST', 'DATABAESHOST');
+define('SURVEY_DATABASE', 'DATABASENAME');
+
+//Define Path
+define('IMAGE_PATH', 'http://pathtomyimages.com/ics/html/images/');
+define('JS_PATH', 'http://pathtomyimages.com/ics/html/js/');
+define('CSS_PATH', 'http://pathtomyimages.com/ics/html/css/');
+define('JOURNAL_PATH', '/var/www/html/survey/ics/cfg/j_list.txt');
+
+//Define Proxy
+define('PROXY_URL', 'YOUR_PROXY_URL');
+
+//Define Survey Values
+define('RUN_SURVEY', false);
+
+?>
