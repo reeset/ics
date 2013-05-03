@@ -1,4 +1,6 @@
 <?
+ 
+include("functions_s1.php");
 
 /****************************
  * args passes an array

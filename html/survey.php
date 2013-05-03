@@ -12,7 +12,7 @@ if(preg_match('/(?i)msie [1-8]/',$_SERVER['HTTP_USER_AGENT'])) { // if IE<=8
 <head>
         <!--<meta http-equiv="X-UA-Compatible" content="Edge mode" >-->
         <title>Oregon State University Libraries User Survey</title>
-        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="<?=JS_PATH?>jquery-1.8.3.min.js"></script>
         <script src="<?=JS_PATH?>survey.js"></script>
         <link rel="stylesheet" type="text/css" href="<?=CSS_PATH?>style.css">
 </head>

@@ -13,7 +13,12 @@ define('CSS_PATH', 'http://pathtomyimages.com/ics/html/css/');
 define('JOURNAL_PATH', '/var/www/html/survey/ics/cfg/j_list.txt');
 
 //Define Proxy
+//Example: http://ezproxy.proxy.library.oregonstate.edu/login?url=
 define('PROXY_URL', 'YOUR_PROXY_URL');
+
+//PROXY_URL1 is used to pull cached URLs from the db -- just need the domain
+//Example: http://ezproxy.proxy.library.oregonstate.edu/'
+define('PROXY_URL1','YOUR_PROXY_URL_DOMAIN');
 
 //Define Survey Values
 define('RUN_SURVEY', false);

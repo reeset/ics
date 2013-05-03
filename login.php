@@ -92,7 +92,7 @@ if ($action == "post") {
      $_SESSION[$name] = $value;
      $args[$name] = $value;
   }
-  post_journal_survey($args);
+  post_s1_survey($args);
   if (strpos($database_url, 'access.library')==true) {
      header("location: "  . urldecode($database_url));
   } else {
@@ -105,7 +105,7 @@ if ($action == "post") {
     $j_urls = explode("\n", $contents);
     foreach($j_urls as $jj) {
        if (strpos(urldecode($database_url), trim($jj)) !==false) {
-           require_once('html/journal_survey.php');
+           require_once('html/s1_survey.php');
 	   break;
        }
     }  
@@ -135,7 +135,21 @@ if ($action == "post") {
     }
     $args['url'] = $database_url;
     post_survey($args);
-    header("location: " . PROXY_URL . "login?" . urldecode($database_url));
+    
+    //Added to support bad urls
+    if (strpos($database_url, "login?url=login?url=") !==false) {
+       $database_url = str_replace("login?url=login?url=", "", $database_url);
+    } else {
+       if (strpos(urldecode($database_url), "login?url=login?url=") !== false) {
+          $database_url = urlencode(str_replace("login?url=login?url=", "", urldecode($database_url)));
+       }
+    }
+
+    if (strpos(urldecode($database_url), "url=") !==false) {
+    header("location: " . PROXY_URL1 . "login?" . urldecode($database_url));
+    } else {
+    header("location: " . PROXY_URL . urldecode($database_url));
+    }
   } else {
     //we haven't run the survey yet -- post it
     require_once('html/survey.php');

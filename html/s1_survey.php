@@ -12,8 +12,10 @@ if(preg_match('/(?i)msie [1-8]/',$_SERVER['HTTP_USER_AGENT'])) { // if IE<=8
 <head>
         <meta http-equiv="X-UA-Compatible" content="Edge mode" >
         <title>Oregon State University Libraries User Survey</title>
-        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script src="<?=JS_PATH?>journal_survey.js"></script>
+        <script src="<?=JS_PATH?>jquery-1.8.3.min.js"></script>
+        <script src="<?=JS_PATH?>s1.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
+        <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
         <link rel="stylesheet" type="text/css" href="<?=CSS_PATH?>style.css">
 </head>
 <body>
@@ -34,7 +36,7 @@ if(preg_match('/(?i)msie [1-8]/',$_SERVER['HTTP_USER_AGENT'])) { // if IE<=8
      <p style="margin-top: -20px;">Oregon State University is conducting an anonymous survey to evaluate use of specific journal resources.  Thank you for your help.</p>
 
      <p>
-       <?require_once("survey_journal_form.php");?>
+       <?require_once("s1_form.php");?>
      </p>      
 
    </div>
